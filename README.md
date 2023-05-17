@@ -21,6 +21,8 @@ Open-source in nature, the Password Generator project encourages collaboration, 
 - User-Friendly Interface: The project offers an intuitive and easy-to-use interface, making it accessible to users with varying levels of technical expertise.
 - Copy to Clipboard: Users can quickly copy generated passwords to their system clipboard, enabling seamless integration with other applications and platforms.
 - Password Strength Indicator: The project may include a feature to visually indicate the strength of the generated password, helping users assess its robustness.
+- Transfer Password Vault: Safely and securely transfer your password vault between computers using encrypted files. This feature allows you to export your password vault as an encrypted file, which can be transferred to another computer and imported securely into the password manager.
+- Offline Access: Access your passwords and sensitive information even without an internet connection, ensuring seamless availability whenever you need it.
 
 ## Benefits
 - Local Storage: Your passwords and sensitive information are securely stored on your device, giving you full control over your data.
