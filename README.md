@@ -31,6 +31,6 @@ Open Source: The project may be open source, encouraging collaboration, feedback
 
 ## Future Plans
 We have plans to enhance the project's data storage capabilities by switching from serialization to PostgreSQL, a robust and scalable relational database management system. This transition will offer several benefits, including:
--- Improved Data Management: PostgreSQL provides advanced features for data organization, indexing, and querying, enabling efficient and flexible data management.
--- Data Security and Reliability: PostgreSQL offers strong data integrity, concurrency control, and support for ACID transactions, ensuring the security and reliability of your stored data.
--- Scalability: With PostgreSQL, you can seamlessly scale your data storage as your project grows, accommodating increased data volumes and user demands.
+- Improved Data Management: PostgreSQL provides advanced features for data organization, indexing, and querying, enabling efficient and flexible data management.
+- Data Security and Reliability: PostgreSQL offers strong data integrity, concurrency control, and support for ACID transactions, ensuring the security and reliability of your stored data.
+- Scalability: With PostgreSQL, you can seamlessly scale your data storage as your project grows, accommodating increased data volumes and user demands.
