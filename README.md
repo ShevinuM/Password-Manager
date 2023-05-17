@@ -36,3 +36,11 @@ Open Source: The project may be open source, encouraging collaboration, feedback
   - Scalability for Growing Password Datasets: With PostgreSQL, you can seamlessly scale your password storage as your dataset grows. It can handle increased volumes of passwords and user demands efficiently, allowing you to manage a growing number of password entries with ease.
   - By transitioning to PostgreSQL for password storage, I aim to provide a more secure and scalable solution that ensures the privacy and integrity of sensitive user passwords. This change aligns with our commitment to offering a comprehensive and reliable password management solution.
 - The project is currently under active development, and there are several exciting features and enhancements planned for the future. While the project is in the direction of making progress, it's important to note that not all features listed below have been completed or started at this stage.
+
+## Project Structure
+The Java files for this project are located in the following directory:
+- `src`: This folder contains the source code of the project.
+- `main/java`: Java files are located within this directory.
+- `com/example/projectname/`: This represents the package structure of the project.
+You can navigate to the appropriate folder to access and explore the Java files related to this project.
+
