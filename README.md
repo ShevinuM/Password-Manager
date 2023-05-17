@@ -1,5 +1,4 @@
 # Password-Manager
-This repository contains a password manager which stores and generates passwords
 
 ## Project Description
 The Password Generator project is a user-friendly and secure tool designed to generate strong and unique passwords. With a focus on user privacy and data protection, this project ensures that passwords are only stored locally, offering an additional layer of security by eliminating the need for server storage.
