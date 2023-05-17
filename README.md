@@ -25,3 +25,12 @@ Open-source in nature, the Password Generator project encourages collaboration, 
 - Time-Saving: With the password generator, users no longer need to manually come up with secure passwords or rely on weak, easily guessable ones. This saves time and effort while ensuring stronger password protection.
 - Versatility: The project can be used in various contexts, such as creating passwords for online accounts, Wi-Fi networks, encrypted files, or any other situation requiring secure password generation.
 Open Source: The project may be open source, encouraging collaboration, feedback, and customization from the developer community.
+
+## Current Implementations
+- Serialization: The project utilizes serialization to store and retrieve data. Serialized objects are stored locally, providing a secure and efficient means of data persistence.
+
+## Future Plans
+We have plans to enhance the project's data storage capabilities by switching from serialization to PostgreSQL, a robust and scalable relational database management system. This transition will offer several benefits, including:
+-- Improved Data Management: PostgreSQL provides advanced features for data organization, indexing, and querying, enabling efficient and flexible data management.
+-- Data Security and Reliability: PostgreSQL offers strong data integrity, concurrency control, and support for ACID transactions, ensuring the security and reliability of your stored data.
+-- Scalability: With PostgreSQL, you can seamlessly scale your data storage as your project grows, accommodating increased data volumes and user demands.
