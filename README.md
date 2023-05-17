@@ -30,8 +30,9 @@ Open Source: The project may be open source, encouraging collaboration, feedback
 - Serialization: The project utilizes serialization to store and retrieve data. Serialized objects are stored locally, providing a secure and efficient means of data persistence.
 
 ## Future Plans
-- I have plans to enhance the project's data storage capabilities by switching from serialization to PostgreSQL, a robust and scalable relational database management system. This transition will offer several benefits, including:
-  - Improved Data Management: PostgreSQL provides advanced features for data organization, indexing, and querying, enabling efficient and flexible data management.
-  - Data Security and Reliability: PostgreSQL offers strong data integrity, concurrency control, and support for ACID transactions, ensuring the security and reliability of your stored data.
-  - Scalability: With PostgreSQL, you can seamlessly scale your data storage as your project grows, accommodating increased data volumes and user demands.
+- I have plans to enhance the project's password storage capabilities by transitioning from serialization to PostgreSQL, a robust and scalable relational database management system. This transition will offer several benefits specifically tailored to password management, including:
+  - Improved Password Management: PostgreSQL provides advanced features for secure storage and retrieval of passwords. It offers built-in encryption mechanisms and hashing algorithms to ensure the confidentiality and integrity of stored passwords.
+  - Enhanced Data Security and Reliability: PostgreSQL offers robust data security features, including access control mechanisms and advanced authentication options. It also provides reliable data storage with features like backup and restore capabilities, ensuring the safety and availability of your password data.
+ - Scalability for Growing Password Datasets: With PostgreSQL, you can seamlessly scale your password storage as your dataset grows. It can handle increased volumes of passwords and user demands efficiently, allowing you to manage a growing number of password entries with ease.
+  By transitioning to PostgreSQL for password storage, I aim to provide a more secure and scalable solution that ensures the privacy and integrity of sensitive user passwords. This change aligns with our commitment to offering a comprehensive and reliable password management solution.
 - The project is currently under active development, and there are several exciting features and enhancements planned for the future. While the project is in the direction of making progress, it's important to note that not all features listed below have been completed or started at this stage.
