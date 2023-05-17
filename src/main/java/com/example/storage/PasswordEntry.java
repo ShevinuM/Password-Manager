@@ -1,11 +1,15 @@
 package com.example.storage;
 
-// Represents a single password entry with attributes like username, password, and associated website or application.
-public class PasswordEntry {
+import java.io.Serializable;
 
-    private String username;
-    private String password;
-    private String website;
+// Represents a single password entry with attributes like username, password, and associated website or application.
+public class PasswordEntry implements Serializable {
+
+
+    private static final long serialVersionUID = 1L;
+    private final String username;
+    private final String password;
+    private final String website;
 
     public PasswordEntry(String username, String password, String website) {
         this.username = username;
@@ -13,13 +17,16 @@ public class PasswordEntry {
         this.website = website;
     }
 
-    public void storePassword(PasswordEntry password) {
-
+    public String getUsername() {
+        return username;
     }
 
-    
+    public String getPassword() {
+        return password;
+    }
 
-
-
+    public String getWebsite() {
+        return website;
+    }
 
 }
