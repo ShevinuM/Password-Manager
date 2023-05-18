@@ -7,6 +7,7 @@
     <list default="true" id="0a8f5caf-1571-4a5f-b282-17fb77f4fce4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/storage/SerializationPasswordStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/storage/SerializationPasswordStorage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/storage/SerializationPasswordStorageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/storage/SerializationPasswordStorageTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,8 +49,8 @@
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.SerializationPasswordStorageTest">
-    <configuration name="PasswordEntryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.SerializationPasswordStorageTest$NegativeTests.testModifyReturnedList_OriginalListUnchanged">
+    <configuration name="SerializationPasswordStorageTest$NegativeTests.testAddDuplicatePasswordEntry" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Password-Manager" />
       <extension name="coverage">
         <pattern>
@@ -57,30 +58,15 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.example.storage" />
-      <option name="MAIN_CLASS_NAME" value="com.example.storage.PasswordEntryTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PasswordEntryTest.testHashCodeEquality" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Password-Manager" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.storage.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example.storage" />
-      <option name="MAIN_CLASS_NAME" value="com.example.storage.PasswordEntryTest" />
-      <option name="METHOD_NAME" value="testHashCodeEquality" />
+      <option name="PACKAGE_NAME" value="com.example.storage.SerializationPasswordStorageTest" />
+      <option name="MAIN_CLASS_NAME" value="com.example.storage.SerializationPasswordStorageTest$NegativeTests" />
+      <option name="METHOD_NAME" value="testAddDuplicatePasswordEntry" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PasswordGeneratorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SerializationPasswordStorageTest$NegativeTests.testAddPasswordEntry_NullEntry" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Password-Manager" />
       <extension name="coverage">
         <pattern>
@@ -88,14 +74,15 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.example.storage" />
-      <option name="MAIN_CLASS_NAME" value="com.example.storage.PasswordGeneratorTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="com.example.storage.SerializationPasswordStorageTest" />
+      <option name="MAIN_CLASS_NAME" value="com.example.storage.SerializationPasswordStorageTest$NegativeTests" />
+      <option name="METHOD_NAME" value="testAddPasswordEntry_NullEntry" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PasswordGeneratorTest.testGeneratePassword" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SerializationPasswordStorageTest$NegativeTests.testModifyReturnedList_InternalStateUnchanged" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Password-Manager" />
       <extension name="coverage">
         <pattern>
@@ -103,9 +90,25 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.example.storage" />
-      <option name="MAIN_CLASS_NAME" value="com.example.storage.PasswordGeneratorTest" />
-      <option name="METHOD_NAME" value="testGeneratePassword" />
+      <option name="PACKAGE_NAME" value="com.example.storage.SerializationPasswordStorageTest" />
+      <option name="MAIN_CLASS_NAME" value="com.example.storage.SerializationPasswordStorageTest$NegativeTests" />
+      <option name="METHOD_NAME" value="testModifyReturnedList_InternalStateUnchanged" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SerializationPasswordStorageTest$NegativeTests.testModifyReturnedList_OriginalListUnchanged" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Password-Manager" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.storage.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.storage.SerializationPasswordStorageTest" />
+      <option name="MAIN_CLASS_NAME" value="com.example.storage.SerializationPasswordStorageTest$NegativeTests" />
+      <option name="METHOD_NAME" value="testModifyReturnedList_OriginalListUnchanged" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -128,11 +131,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SerializationPasswordStorageTest$NegativeTests.testModifyReturnedList_OriginalListUnchanged" />
+        <item itemvalue="JUnit.SerializationPasswordStorageTest$NegativeTests.testModifyReturnedList_InternalStateUnchanged" />
         <item itemvalue="JUnit.SerializationPasswordStorageTest" />
-        <item itemvalue="JUnit.PasswordGeneratorTest" />
-        <item itemvalue="JUnit.PasswordGeneratorTest.testGeneratePassword" />
-        <item itemvalue="JUnit.PasswordEntryTest" />
-        <item itemvalue="JUnit.PasswordEntryTest.testHashCodeEquality" />
+        <item itemvalue="JUnit.SerializationPasswordStorageTest$NegativeTests.testAddDuplicatePasswordEntry" />
+        <item itemvalue="JUnit.SerializationPasswordStorageTest$NegativeTests.testAddPasswordEntry_NullEntry" />
       </list>
     </recent_temporary>
   </component>
@@ -147,7 +150,7 @@
       <workItem from="1684350688236" duration="3108000" />
       <workItem from="1684354079819" duration="12511000" />
       <workItem from="1684403971120" duration="939000" />
-      <workItem from="1684407775365" duration="9373000" />
+      <workItem from="1684407775365" duration="11530000" />
     </task>
     <servers />
   </component>

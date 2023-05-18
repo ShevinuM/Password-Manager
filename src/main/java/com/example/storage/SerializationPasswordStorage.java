@@ -22,7 +22,15 @@ public class SerializationPasswordStorage {
      * @param passwordEntry The PasswordEntry to be added.
      */
     public void addPasswordEntry(PasswordEntry passwordEntry) {
-        passwordEntries.add(passwordEntry);
+        if (passwordEntry != null) {
+            if (passwordEntries.contains(passwordEntry)) {
+                throw new IllegalArgumentException("PasswordEntry already exists in the storage");
+            } else {
+                passwordEntries.add(passwordEntry);
+            }
+        } else {
+            throw new NullPointerException("PasswordEntry cannot be null");
+        }
     }
 
     /**
