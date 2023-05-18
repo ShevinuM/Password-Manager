@@ -43,9 +43,7 @@ public class PasswordEntry implements Serializable {
     @Override
     public boolean equals(Object obj) {
         if (this == obj) return true;
-
         if (obj == null || getClass() != obj.getClass()) return false;
-
         PasswordEntry other = (PasswordEntry) obj;
         return Objects.equals(username, other.username)
                 && Objects.equals(password, other.password)
