@@ -19,7 +19,6 @@ public class SerializationPasswordStorage {
 
     /**
      * Adds a PasswordEntry to the password storage.
-     *
      * @param passwordEntry The PasswordEntry to be added.
      */
     public void addPasswordEntry(PasswordEntry passwordEntry) {
@@ -28,7 +27,6 @@ public class SerializationPasswordStorage {
 
     /**
      * Retrieves the list of password entries.
-     *
      * @return The list of password entries.
      */
     public List<PasswordEntry> getPasswordEntries() {
@@ -64,7 +62,6 @@ public class SerializationPasswordStorage {
     /**
      * Loads the password entries from a file in the user's home directory using object deserialization.
      * The file should be saved with the predetermined name.
-     *
      * @param callback The callback interface to handle the password load result.
      *                 The callback methods will be invoked to notify the caller about the success or failure of the operation.
      */
@@ -81,7 +78,7 @@ public class SerializationPasswordStorage {
                 callback.onPasswordLoadError("Invalid data format in the password file.");
             }
         } catch (FileNotFoundException e) {
-            callback.onPasswordLoadError("Password file not found.");
+            callback.onPasswordLoadError("No saved Passwords.");
         } catch (IOException | ClassNotFoundException e) {
             callback.onPasswordLoadError("Error loading password file: " + e.getMessage());
         } catch (SecurityException e) {
