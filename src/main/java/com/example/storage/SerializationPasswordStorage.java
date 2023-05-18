@@ -99,9 +99,8 @@ public class SerializationPasswordStorage {
     public void loadPasswords(PasswordLoadCallback callback) {
         String userHomeDirectory = System.getProperty("user.home");
         String filePath = userHomeDirectory + File.separator + "passwords.ser";
-        File file = new File(filePath);
 
-        try (ObjectInputStream inputStream = new ObjectInputStream(new FileInputStream(file))) {
+        try (ObjectInputStream inputStream = new ObjectInputStream(new FileInputStream(filePath))) {
             Object object = inputStream.readObject();
             if (object instanceof List) {
                 passwordEntries = (List<PasswordEntry>) object;

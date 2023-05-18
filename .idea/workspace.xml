@@ -7,7 +7,6 @@
     <list default="true" id="0a8f5caf-1571-4a5f-b282-17fb77f4fce4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/storage/SerializationPasswordStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/storage/SerializationPasswordStorage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/storage/SerializationPasswordStorageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/storage/SerializationPasswordStorageTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,10 +129,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.SerializationPasswordStorageTest" />
-        <item itemvalue="JUnit.SerializationPasswordStorageTest.testSavePasswords_FileExists" />
-        <item itemvalue="JUnit.SerializationPasswordStorageTest$NegativeTests.testLoadPasswords_EmptyFile" />
         <item itemvalue="JUnit.PasswordGeneratorTest" />
         <item itemvalue="JUnit.PasswordEntryTest" />
+        <item itemvalue="JUnit.SerializationPasswordStorageTest.testSavePasswords_FileExists" />
+        <item itemvalue="JUnit.SerializationPasswordStorageTest$NegativeTests.testLoadPasswords_EmptyFile" />
       </list>
     </recent_temporary>
   </component>
@@ -148,7 +147,7 @@
       <workItem from="1684350688236" duration="3108000" />
       <workItem from="1684354079819" duration="12511000" />
       <workItem from="1684403971120" duration="939000" />
-      <workItem from="1684407775365" duration="19393000" />
+      <workItem from="1684407775365" duration="20589000" />
     </task>
     <servers />
   </component>
