@@ -1,16 +1,19 @@
 package com.example.storage;
 
 import com.example.interfaces.PasswordLoadCallback;
+import com.example.interfaces.PasswordSaveCallback;
 
 import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PasswordStorage {
+public class SerializationPasswordStorage {
 
     private List<PasswordEntry> passwordEntries;
 
-    public PasswordStorage() {
+    public SerializationPasswordStorage() {
         passwordEntries = new ArrayList<>();
     }
 
@@ -34,17 +37,26 @@ public class PasswordStorage {
 
     /**
      * Saves the password entries to a file in the user's home directory using object serialization.
-     * The file will be saved with a predetermined name.
+     * The file will be saved with a predetermined name 'passwords.ser'
+     * @param callback The callback interface to handle the password save result.  The callback methods will be invoked
+     *                 to notify the caller about the success or failure of the operation.
      */
-    public void savePasswords() {
+    public void savePasswords(PasswordSaveCallback callback) {
         String userHomeDirectory = System.getProperty("user.home");
         String filePath = userHomeDirectory + File.separator + "passwords.ser";
-        File file = new File(filePath)
 
         try (ObjectOutputStream outputStream = new ObjectOutputStream(new FileOutputStream(filePath))) {
-            if (file.exists()) outputStream.reset(); // File already exists, overwrite its contents
+            if (Files.exists(Paths.get(filePath))) outputStream.reset(); // File already exists, overwrite its contents
             outputStream.writeObject(passwordEntries);
+            callback.onPasswordSaveSuccess();
         } catch (IOException e) {
+            callback.onPasswordSaveError("Failed to save passwords.");
+            e.printStackTrace();
+        } catch (SecurityException e) {
+            callback.onPasswordSaveError("Insufficient permissions to write to the file");
+            e.printStackTrace();
+        } catch (Exception e) {
+            callback.onPasswordSaveError("An unexpected error occured while saving passwords.");
             e.printStackTrace();
         }
     }
@@ -72,6 +84,11 @@ public class PasswordStorage {
             callback.onPasswordLoadError("Password file not found.");
         } catch (IOException | ClassNotFoundException e) {
             callback.onPasswordLoadError("Error loading password file: " + e.getMessage());
+        } catch (SecurityException e) {
+            callback.onPasswordLoadError("Insufficient permissions to read the password file.")
+        } catch (ClassCastException e) {
+            callback.onPasswordLoadError("Invalid data format in the password file. Unable to cast to" +
+                    "List<PasswordEntry>.")
         }
     }
 }

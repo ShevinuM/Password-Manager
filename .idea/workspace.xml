@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0a8f5caf-1571-4a5f-b282-17fb77f4fce4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/storage/PasswordStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/storage/PasswordStorage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/storage/PasswordStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/storage/SerializationPasswordStorage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +16,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -53,7 +53,7 @@
       <option name="presentableId" value="Default" />
       <updated>1684350685901</updated>
       <workItem from="1684350688236" duration="3108000" />
-      <workItem from="1684354079819" duration="8499000" />
+      <workItem from="1684354079819" duration="11211000" />
     </task>
     <servers />
   </component>
