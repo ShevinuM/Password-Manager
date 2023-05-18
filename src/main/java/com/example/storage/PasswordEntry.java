@@ -1,6 +1,7 @@
 package com.example.storage;
 
 import java.io.Serializable;
+import java.util.Objects;
 
 // Represents a single password entry with attributes like username, password, and associated website or application.
 public class PasswordEntry implements Serializable {
@@ -27,6 +28,18 @@ public class PasswordEntry implements Serializable {
 
     public String getWebsite() {
         return website;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+
+        if (obj == null || getClass() != obj.getClass()) return false;
+
+        PasswordEntry other = (PasswordEntry) obj;
+        return Objects.equals(username, other.username)
+                && Objects.equals(password, other.password)
+                && Objects.equals(website, other.website);
     }
 
 }

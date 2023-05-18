@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a8f5caf-1571-4a5f-b282-17fb77f4fce4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/controller/PasswordLoadController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controller/PasswordController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controller/PasswordSaveController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controller/PasswordSaveController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/storage/PasswordEntry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/storage/PasswordEntry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/storage/PasswordEntryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/storage/PasswordEntryTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +49,38 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.PasswordEntryTest">
+    <configuration name="PasswordEntryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Password-Manager" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.storage.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.storage" />
+      <option name="MAIN_CLASS_NAME" value="com.example.storage.PasswordEntryTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PasswordEntryTest.testEquality" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Password-Manager" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.storage.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.storage" />
+      <option name="MAIN_CLASS_NAME" value="com.example.storage.PasswordEntryTest" />
+      <option name="METHOD_NAME" value="testEquality" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="PasswordEntryTest.testGetUsername" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Password-Manager" />
       <extension name="coverage">
@@ -66,8 +97,44 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="PasswordEntryTest.testGetWebsite" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Password-Manager" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.storage.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.storage" />
+      <option name="MAIN_CLASS_NAME" value="com.example.storage.PasswordEntryTest" />
+      <option name="METHOD_NAME" value="testGetWebsite" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PasswordEntryTest.testSerializationDeserialization" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Password-Manager" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.storage.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.storage" />
+      <option name="MAIN_CLASS_NAME" value="com.example.storage.PasswordEntryTest" />
+      <option name="METHOD_NAME" value="testSerializationDeserialization" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.PasswordEntryTest" />
+        <item itemvalue="JUnit.PasswordEntryTest.testSerializationDeserialization" />
+        <item itemvalue="JUnit.PasswordEntryTest.testEquality" />
+        <item itemvalue="JUnit.PasswordEntryTest.testGetWebsite" />
         <item itemvalue="JUnit.PasswordEntryTest.testGetUsername" />
       </list>
     </recent_temporary>
@@ -83,7 +150,7 @@
       <workItem from="1684350688236" duration="3108000" />
       <workItem from="1684354079819" duration="12511000" />
       <workItem from="1684403971120" duration="939000" />
-      <workItem from="1684407775365" duration="3364000" />
+      <workItem from="1684407775365" duration="5656000" />
     </task>
     <servers />
   </component>
