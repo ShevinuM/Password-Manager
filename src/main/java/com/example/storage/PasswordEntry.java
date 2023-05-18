@@ -13,6 +13,16 @@ public class PasswordEntry implements Serializable {
     private final String website;
 
     public PasswordEntry(String username, String password, String website) {
+        if (username == null || username.isEmpty()) {
+            throw new IllegalArgumentException("Username cannot be null or empty");
+        }
+        if (password == null || password.isEmpty()) {
+            throw new IllegalArgumentException("Password cannot be null or empty");
+        }
+        if (website == null || website.isEmpty()) {
+            throw new IllegalArgumentException("Website cannot be null or empty");
+        }
+
         this.username = username;
         this.password = password;
         this.website = website;

@@ -21,12 +21,28 @@ public class SerializationPasswordStorage {
      * Adds a PasswordEntry to the password storage.
      * @param passwordEntry The PasswordEntry to be added.
      */
-    public void addPasswordEntry(PasswordEntry passwordEntry) {
+    public synchronized void addPasswordEntry(PasswordEntry passwordEntry) {
         if (passwordEntry != null) {
             if (passwordEntries.contains(passwordEntry)) {
                 throw new IllegalArgumentException("PasswordEntry already exists in the storage");
             } else {
                 passwordEntries.add(passwordEntry);
+            }
+        } else {
+            throw new NullPointerException("PasswordEntry cannot be null");
+        }
+    }
+
+    /**
+     * Removes a PasswordEntry from the password storage.
+     * @param passwordEntry The PasswordEntry to be removed.
+     */
+    public synchronized void removePasswordEntry(PasswordEntry passwordEntry) {
+        if (passwordEntry != null) {
+            if (passwordEntries.contains(passwordEntry)) {
+                passwordEntries.remove(passwordEntry);
+            } else {
+                throw new IllegalArgumentException("PasswordEntry does not exist in the storage");
             }
         } else {
             throw new NullPointerException("PasswordEntry cannot be null");
@@ -42,12 +58,19 @@ public class SerializationPasswordStorage {
     }
 
     /**
+     * Clears the password entries from the password storage.
+     */
+    public void clear() {
+        passwordEntries.clear();
+    }
+
+    /**
      * Saves the password entries to a file in the user's home directory using object serialization.
      * The file will be saved with a predetermined name 'passwords.ser'
      * @param callback The callback interface to handle the password save result.  The callback methods will be invoked
      *                 to notify the caller about the success or failure of the operation.
      */
-    public void savePasswords(PasswordSaveCallback callback) {
+    public synchronized void savePasswords(PasswordSaveCallback callback) {
         String userHomeDirectory = System.getProperty("user.home");
         String filePath = userHomeDirectory + File.separator + "passwords.ser";
 
