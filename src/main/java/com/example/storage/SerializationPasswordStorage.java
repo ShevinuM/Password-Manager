@@ -85,10 +85,10 @@ public class SerializationPasswordStorage {
         } catch (IOException | ClassNotFoundException e) {
             callback.onPasswordLoadError("Error loading password file: " + e.getMessage());
         } catch (SecurityException e) {
-            callback.onPasswordLoadError("Insufficient permissions to read the password file.")
+            callback.onPasswordLoadError("Insufficient permissions to read the password file.");
         } catch (ClassCastException e) {
             callback.onPasswordLoadError("Invalid data format in the password file. Unable to cast to" +
-                    "List<PasswordEntry>.")
+                    "List<PasswordEntry>.");
         }
     }
 }
