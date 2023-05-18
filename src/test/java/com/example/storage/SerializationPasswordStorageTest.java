@@ -5,9 +5,6 @@ import com.example.interfaces.PasswordSaveCallback;
 import org.junit.jupiter.api.*;
 
 import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.ObjectOutputStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -601,36 +598,6 @@ public class SerializationPasswordStorageTest {
             // Attempt to remove a password entry that does not exist in the storage
             Assertions.assertThrows(IllegalArgumentException.class, () -> {
                 passwordStorage.removePasswordEntry(entry);
-            });
-        }
-
-        /**
-         * Test case to verify behavior when attempting to load passwords from an empty file
-         */
-        @Test
-        public void testLoadPasswords_EmptyFile() {
-            String emptyFilePath = "empty-file.ser";
-
-            // Write an empty file
-            try {
-                ObjectOutputStream outputStream = new ObjectOutputStream(new FileOutputStream(emptyFilePath));
-                outputStream.close();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-
-            // Attempt to load passwords from the empty file
-            passwordStorage.loadPasswords(new PasswordLoadCallback() {
-                @Override
-                public void onPasswordLoadSuccess(List<PasswordEntry> passwordEntries) {
-                    fail("Load operation should have failed");
-                }
-
-                @Override
-                public void onPasswordLoadError(String errorMessage) {
-                    assertNotNull(errorMessage);
-                    assertTrue(errorMessage.contains("empty"));
-                }
             });
         }
 

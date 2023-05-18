@@ -99,8 +99,9 @@ public class SerializationPasswordStorage {
     public void loadPasswords(PasswordLoadCallback callback) {
         String userHomeDirectory = System.getProperty("user.home");
         String filePath = userHomeDirectory + File.separator + "passwords.ser";
+        File file = new File(filePath);
 
-        try (ObjectInputStream inputStream = new ObjectInputStream(new FileInputStream(filePath))) {
+        try (ObjectInputStream inputStream = new ObjectInputStream(new FileInputStream(file))) {
             Object object = inputStream.readObject();
             if (object instanceof List) {
                 passwordEntries = (List<PasswordEntry>) object;
@@ -109,14 +110,13 @@ public class SerializationPasswordStorage {
                 callback.onPasswordLoadError("Invalid data format in the password file.");
             }
         } catch (FileNotFoundException e) {
-            callback.onPasswordLoadError("No saved Passwords.");
+            callback.onPasswordLoadError("Password file not found.");
         } catch (IOException | ClassNotFoundException e) {
             callback.onPasswordLoadError("Error loading password file: " + e.getMessage());
         } catch (SecurityException e) {
             callback.onPasswordLoadError("Insufficient permissions to read the password file.");
         } catch (ClassCastException e) {
-            callback.onPasswordLoadError("Invalid data format in the password file. Unable to cast to" +
-                    "List<PasswordEntry>.");
+            callback.onPasswordLoadError("Invalid data format in the password file. Unable to cast to List<PasswordEntry>.");
         }
     }
 }
