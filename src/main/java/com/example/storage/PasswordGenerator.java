@@ -2,29 +2,22 @@ package com.example.storage;
 
 import java.security.SecureRandom;
 
-
 public class PasswordGenerator {
-    private final Boolean hasSpecialCharacters;
-    private final Boolean hasNumbers;
-    private final Boolean hasAplha;
-    private final Integer passwordLength;
-
-    public PasswordGenerator(Boolean hasSpecialCharacters,
-                             Boolean hasNumbers, Boolean hasAlpha, Integer passwordLength) {
-        this.hasSpecialCharacters = hasSpecialCharacters;
-        this.hasNumbers = hasNumbers;
-        this.hasAplha = hasAlpha;
-        this.passwordLength = passwordLength;
-    }
 
     /**
      * Generates a random password based on the specified criteria.
-     * @return  A randomly generated password that meets the specified criteria.
-     * @throws Exception if no valid characters are available for password generation
+     *
+     * @param hasSpecialCharacters Whether to include special characters in the password.
+     * @param hasNumbers           Whether to include numbers in the password.
+     * @param hasAlpha             Whether to include alphabets in the password.
+     * @param passwordLength       The desired length of the password.
+     * @return A randomly generated password that meets the specified criteria.
+     * @throws Exception if no valid characters are available for password generation.
      */
-    public String generatePassword() throws Exception {
+    public static String generatePassword(Boolean hasSpecialCharacters,
+                                   Boolean hasNumbers, Boolean hasAlpha, Integer passwordLength) throws Exception {
         String validCharacters = "";
-        if (hasAplha) validCharacters += "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        if (hasAlpha) validCharacters += "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
         if (hasNumbers) validCharacters += "0123456789";
         if (hasSpecialCharacters) validCharacters += "!@#$%^&*()-_=+[{]};:'\\\",<.>/?";
 

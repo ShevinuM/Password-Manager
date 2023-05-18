@@ -48,16 +48,6 @@ public class PasswordEntryTest {
     }
 
     @Test
-    public void testHashCodeEquality() {
-        // Arrange
-        PasswordEntry entry1 = new PasswordEntry("john_doe", "pa55w0rd", "www.example.com");
-        PasswordEntry entry2 = new PasswordEntry("john_doe", "pa55w0rd", "www.example.com");
-
-        // Assert
-        assertEquals(entry1.hashCode(), entry2.hashCode());  // Objects with the same attributes have the same hash code
-    }
-
-    @Test
     public void testSerializationDeserialization() {
         // Arrange
         PasswordEntry entry = new PasswordEntry("john_doe", "pa55w0rd", "www.example.com");

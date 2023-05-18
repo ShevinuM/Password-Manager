@@ -6,8 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0a8f5caf-1571-4a5f-b282-17fb77f4fce4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controller/PasswordSaveController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controller/PasswordSaveController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/storage/PasswordEntry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/storage/PasswordEntry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/storage/PasswordGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/storage/PasswordGenerator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/example/storage/PasswordEntryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/storage/PasswordEntryTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -37,19 +36,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
-  <component name="RunManager" selected="JUnit.PasswordEntryTest">
+}]]></component>
+  <component name="RunManager" selected="JUnit.PasswordGeneratorTest">
     <configuration name="PasswordEntryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Password-Manager" />
       <extension name="coverage">
@@ -65,7 +65,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PasswordEntryTest.testEquality" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PasswordEntryTest.testHashCodeEquality" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Password-Manager" />
       <extension name="coverage">
         <pattern>
@@ -75,39 +75,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.example.storage" />
       <option name="MAIN_CLASS_NAME" value="com.example.storage.PasswordEntryTest" />
-      <option name="METHOD_NAME" value="testEquality" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PasswordEntryTest.testGetUsername" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Password-Manager" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.storage.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example.storage" />
-      <option name="MAIN_CLASS_NAME" value="com.example.storage.PasswordEntryTest" />
-      <option name="METHOD_NAME" value="testGetUsername" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PasswordEntryTest.testGetWebsite" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Password-Manager" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.storage.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example.storage" />
-      <option name="MAIN_CLASS_NAME" value="com.example.storage.PasswordEntryTest" />
-      <option name="METHOD_NAME" value="testGetWebsite" />
+      <option name="METHOD_NAME" value="testHashCodeEquality" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -129,13 +97,44 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="PasswordGeneratorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Password-Manager" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.storage.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.storage" />
+      <option name="MAIN_CLASS_NAME" value="com.example.storage.PasswordGeneratorTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PasswordGeneratorTest.testGeneratePassword" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Password-Manager" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.storage.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.storage" />
+      <option name="MAIN_CLASS_NAME" value="com.example.storage.PasswordGeneratorTest" />
+      <option name="METHOD_NAME" value="testGeneratePassword" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.PasswordGeneratorTest" />
+        <item itemvalue="JUnit.PasswordGeneratorTest.testGeneratePassword" />
         <item itemvalue="JUnit.PasswordEntryTest" />
+        <item itemvalue="JUnit.PasswordEntryTest.testHashCodeEquality" />
         <item itemvalue="JUnit.PasswordEntryTest.testSerializationDeserialization" />
-        <item itemvalue="JUnit.PasswordEntryTest.testEquality" />
-        <item itemvalue="JUnit.PasswordEntryTest.testGetWebsite" />
-        <item itemvalue="JUnit.PasswordEntryTest.testGetUsername" />
       </list>
     </recent_temporary>
   </component>
@@ -150,7 +149,7 @@
       <workItem from="1684350688236" duration="3108000" />
       <workItem from="1684354079819" duration="12511000" />
       <workItem from="1684403971120" duration="939000" />
-      <workItem from="1684407775365" duration="5656000" />
+      <workItem from="1684407775365" duration="7526000" />
     </task>
     <servers />
   </component>
@@ -167,5 +166,16 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/storage/PasswordEntry.java</url>
+          <line>39</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
