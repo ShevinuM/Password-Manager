@@ -5,8 +5,6 @@ import java.util.Map;
 
 public class SerializationFolderStorage {
 
-    public record Folder(String folderName) {}
-
     private static final Map<String, Folder> folderMap = new HashMap<>();
 
     // Static block to initialize default folders

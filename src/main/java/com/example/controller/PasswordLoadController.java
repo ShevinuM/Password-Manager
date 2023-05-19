@@ -3,6 +3,7 @@ package com.example.controller;
 import com.example.interfaces.PasswordLoadCallback;
 import com.example.storage.PasswordEntry;
 import com.example.storage.SerializationPasswordStorage;
+
 import java.util.List;
 
 /**
@@ -16,7 +17,6 @@ public class PasswordLoadController implements PasswordLoadCallback {
      * Called when the password loading is successful.
      * @param passwordEntries The list of password entries loaded successfully.
      */
-    @Override
     public void onPasswordLoadSuccess(List<PasswordEntry> passwordEntries) {
 
     }
