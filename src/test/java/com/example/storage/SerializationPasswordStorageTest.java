@@ -357,9 +357,9 @@ public class SerializationPasswordStorageTest {
                         public void onPasswordLoadSuccess(List<PasswordEntry> passwordEntries) {
                             // Verify that the special characters are preserved
                             Assertions.assertEquals(1, passwordEntries.size());
-                            Assertions.assertEquals("JohnDoe", passwordEntries.get(0).getUsername());
-                            Assertions.assertEquals("pässwörd123", passwordEntries.get(0).getPassword());
-                            Assertions.assertEquals("Website A", passwordEntries.get(0).getWebsite());
+                            Assertions.assertEquals("JohnDoe", passwordEntries.get(0).username());
+                            Assertions.assertEquals("pässwörd123", passwordEntries.get(0).password());
+                            Assertions.assertEquals("Website A", passwordEntries.get(0).website());
                         }
 
                         @Override
@@ -398,9 +398,9 @@ public class SerializationPasswordStorageTest {
                         public void onPasswordLoadSuccess(List<PasswordEntry> passwordEntries) {
                             // Verify that the special characters or escape sequences are preserved
                             Assertions.assertEquals(1, passwordEntries.size());
-                            Assertions.assertEquals("JohnDoe", passwordEntries.get(0).getUsername());
-                            Assertions.assertEquals("p@ssw\"rd123", passwordEntries.get(0).getPassword());
-                            Assertions.assertEquals("Website\tA", passwordEntries.get(0).getWebsite());
+                            Assertions.assertEquals("JohnDoe", passwordEntries.get(0).username());
+                            Assertions.assertEquals("p@ssw\"rd123", passwordEntries.get(0).password());
+                            Assertions.assertEquals("Website\tA", passwordEntries.get(0).website());
                         }
 
                         @Override
@@ -439,9 +439,9 @@ public class SerializationPasswordStorageTest {
                         public void onPasswordLoadSuccess(List<PasswordEntry> passwordEntries) {
                             // Verify that the special characters are preserved
                             Assertions.assertEquals(1, passwordEntries.size());
-                            Assertions.assertEquals("JohnDoe", passwordEntries.get(0).getUsername());
-                            Assertions.assertEquals("pässwörd123", passwordEntries.get(0).getPassword());
-                            Assertions.assertEquals("Website A", passwordEntries.get(0).getWebsite());
+                            Assertions.assertEquals("JohnDoe", passwordEntries.get(0).username());
+                            Assertions.assertEquals("pässwörd123", passwordEntries.get(0).password());
+                            Assertions.assertEquals("Website A", passwordEntries.get(0).website());
                         }
 
                         @Override

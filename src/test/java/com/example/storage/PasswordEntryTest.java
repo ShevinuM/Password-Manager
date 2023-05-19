@@ -19,9 +19,9 @@ public class PasswordEntryTest {
         PasswordEntry entry = new PasswordEntry(username, password, website);
 
         // Assert
-        assertEquals(username, entry.getUsername());
-        assertEquals(password, entry.getPassword());
-        assertEquals(website, entry.getWebsite());
+        assertEquals(username, entry.username());
+        assertEquals(password, entry.password());
+        assertEquals(website, entry.website());
     }
 
     @Test

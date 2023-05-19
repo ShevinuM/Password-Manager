@@ -11,6 +11,8 @@ import java.util.List;
 
 public class SerializationPasswordStorage {
 
+    public record PasswordEntry(String username, String password, String website) implements Serializable {}
+
     private List<PasswordEntry> passwordEntries;
 
     public SerializationPasswordStorage() {

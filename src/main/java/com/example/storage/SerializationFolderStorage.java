@@ -3,7 +3,9 @@ package com.example.storage;
 import java.util.HashMap;
 import java.util.Map;
 
-public class FolderManager {
+public class SerializationFolderStorage {
+
+    public record Folder(String folderName) {}
 
     private static final Map<String, Folder> folderMap = new HashMap<>();
 
@@ -58,19 +60,8 @@ public class FolderManager {
                 || folderName.equals("Email Accounts");
     }
 
-    public static class Folder {
-        private final String folderName;
+    public static void saveFolders() {
 
-        public Folder(String folderName) {
-            this.folderName = folderName;
-        }
-
-        /**
-         * Returns the name of the folder.
-         * @return The name of the folder.
-         */
-        public String getFolderName() {
-            return folderName;
-        }
     }
+
 }

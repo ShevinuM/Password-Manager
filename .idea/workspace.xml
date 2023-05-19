@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0a8f5caf-1571-4a5f-b282-17fb77f4fce4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/storage/FolderManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/storage/FolderManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/storage/FolderManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/storage/SerializationFolderStorage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,7 +151,7 @@
       <workItem from="1684442616809" duration="119000" />
       <workItem from="1684484369260" duration="1188000" />
       <workItem from="1684508364252" duration="14000" />
-      <workItem from="1684511089270" duration="1460000" />
+      <workItem from="1684511089270" duration="3754000" />
     </task>
     <servers />
   </component>
