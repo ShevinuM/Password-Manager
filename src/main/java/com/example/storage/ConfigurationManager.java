@@ -1,6 +1,9 @@
 package com.example.storage;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import java.io.File;
 import java.io.IOException;
+import java.lang.module.Configuration;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
@@ -43,5 +46,24 @@ public class ConfigurationManager {
     public static boolean isConfigFileExists() {
         return Files.exists(Paths.get(CONFIG_FILE_PATH));
     }
+
+    /**
+     * Loads the configuration file.
+     * @return The configuration file.
+     */
+    public static Configuration loadConfigFile() {
+        Configuration configuration = null;
+        if (isConfigFileExists()) {
+            try {
+                ObjectMapper objectMapper = new ObjectMapper();
+                configuration = objectMapper.readValue(new File(CONFIG_FILE_PATH), Configuration.class);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        return configuration;
+    }
+
+
 
 }
