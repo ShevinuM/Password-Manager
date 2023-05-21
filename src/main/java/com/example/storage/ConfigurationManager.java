@@ -1,6 +1,7 @@
 package com.example.storage;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -29,6 +30,8 @@ public class ConfigurationManager {
                 updateConfigFile(configuration); // Save the initial configuration to the file
             } catch (IOException e) {
                 e.printStackTrace();
+            } catch (SecurityException e) {
+
             }
         }
     }
