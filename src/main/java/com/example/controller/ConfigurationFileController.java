@@ -1,19 +1,19 @@
 package com.example.controller;
 
-import com.example.interfaces.ConfigurationCallback;
-import com.example.storage.Configuration;
-import com.example.storage.ConfigurationManager;
+import com.example.interfaces.ConfigurationFileCallback;
+import com.example.config.ConfigurationFile;
+import com.example.config.ConfigurationFileHandler;
 
-public class ConfigurationController implements ConfigurationCallback {
+public class ConfigurationFileController implements ConfigurationFileCallback {
 
     public void start() {
-        if (ConfigurationManager.isConfigFileExists()) {
-            ConfigurationManager.loadConfigFile(this);
+        if (ConfigurationFileHandler.isConfigFileExists()) {
+            ConfigurationFileHandler.loadConfigFile(this);
         } else {
             // TODO: Load the configuration setup UI.
             // TODO: Get the filepath the user selects in the UI
             String filepath = ""; // Temporary code because error is too annoying. Remove after implementing TODOs
-            ConfigurationManager.createConfigFile(filepath, this);
+            ConfigurationFileHandler.createConfigFile(filepath, this);
         }
     }
 
@@ -28,7 +28,7 @@ public class ConfigurationController implements ConfigurationCallback {
     }
 
     @Override
-    public void onConfigFileLoadSuccess(Configuration configuration) {
+    public void onConfigFileLoadSuccess(ConfigurationFile configuration) {
         // TODO: Implement what to do when the config file is loaded successfully.
     }
 

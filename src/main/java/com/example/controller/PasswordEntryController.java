@@ -6,9 +6,11 @@ public class PasswordEntryController {
 
     private PasswordEntry passwordEntry;
 
-    public PasswordEntryController(String username, String password, String website) {
+    public PasswordEntryController() {
         try {
-            passwordEntry = new PasswordEntry(username, password, website);
+            // TODO: Implement the UI for a password entry
+            // TODO: Get the username, password, website, and folder from the UI
+            // passwordEntry = new PasswordEntry(username, password, website, folder);
         } catch (IllegalArgumentException e) {
 
         }

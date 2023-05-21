@@ -58,8 +58,13 @@ public class SerializationFolderStorage {
                 || folderName.equals("Email Accounts");
     }
 
-    public static void saveFolders() {
-
+    /**
+     * Returns true if the folder with the specified name exists.
+     * @param folderName The name of the folder to check.
+     * @return True if the folder with the specified name exists.
+     */
+    public static Boolean folderExists(String folderName) {
+        return folderMap.containsKey(folderName);
     }
 
 }

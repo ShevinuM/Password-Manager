@@ -1,5 +1,6 @@
 package com.example.storage;
 
+import com.example.utilities.PasswordGenerator;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

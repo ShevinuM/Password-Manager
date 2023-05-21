@@ -1,6 +1,6 @@
-package com.example.storage;
+package com.example.config;
 
-import com.example.interfaces.ConfigurationCallback;
+import com.example.interfaces.ConfigurationFileCallback;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.File;
@@ -11,7 +11,7 @@ import java.nio.file.Paths;
 /**
  * Handles the management of the configuration file for the application.
  */
-public class ConfigurationManager {
+public class ConfigurationFileHandler {
 
     private static final String CONFIG_FILE_NAME = "config.json";
     private static final String CONFIG_FOLDER_NAME = "SafePassConfig";
@@ -23,7 +23,7 @@ public class ConfigurationManager {
      * @param filepath The file path to be stored in the configuration file.
      * @param callback The callback to be called when the configuration file is created / not created.
      */
-    public static void createConfigFile(String filepath, ConfigurationCallback callback) {
+    public static void createConfigFile(String filepath, ConfigurationFileCallback callback) {
         if (!isConfigFileExists()) {
             try {
                 Files.createDirectories(Paths.get(CONFIG_FOLDER_PATH));
@@ -44,8 +44,8 @@ public class ConfigurationManager {
      * @param filePath The file path to be stored in the configuration file.
      * @param callback The callback to be called when the configuration file is updated / not updated.
      */
-    public static void updateConfig(String filePath, ConfigurationCallback callback) {
-        Configuration configuration = new Configuration(filePath);
+    public static void updateConfig(String filePath, ConfigurationFileCallback callback) {
+        ConfigurationFile configuration = new ConfigurationFile(filePath);
         try {
             ObjectMapper objectMapper = new ObjectMapper();
             objectMapper.writeValue(new File(CONFIG_FILE_PATH), configuration);
@@ -76,12 +76,12 @@ public class ConfigurationManager {
      * Loads the configuration file.
      * @param callback The callback to be called when the configuration file is loaded / not loaded.
      */
-    public static void loadConfigFile(ConfigurationCallback callback) {
-        Configuration configuration;
+    public static void loadConfigFile(ConfigurationFileCallback callback) {
+        ConfigurationFile configuration;
         if (isConfigFileExists()) {
             try {
                 ObjectMapper objectMapper = new ObjectMapper();
-                configuration = objectMapper.readValue(new File(CONFIG_FILE_PATH), Configuration.class);
+                configuration = objectMapper.readValue(new File(CONFIG_FILE_PATH), ConfigurationFile.class);
                 callback.onConfigFileLoadSuccess(configuration);
             } catch (IOException e) {
                 e.printStackTrace();
@@ -96,7 +96,7 @@ public class ConfigurationManager {
     /**
      * Deletes the configuration file.
      */
-    public static void deleteConfigFile(ConfigurationCallback callback) {
+    public static void deleteConfigFile(ConfigurationFileCallback callback) {
         if (isConfigFileExists()) {
             try {
                 Files.delete(Paths.get(CONFIG_FILE_PATH));

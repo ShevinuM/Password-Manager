@@ -1,4 +1,4 @@
-package com.example.storage;
+package com.example.utilities;
 
 import java.security.SecureRandom;
 
