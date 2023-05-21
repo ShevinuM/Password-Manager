@@ -1,7 +1,7 @@
 # SafePass
 
 ## Project Description
-SafePass is a user-friendly and secure tool designed to generate strong and unique passwords and store them. With a focus on user privacy and data protection, this application ensures that passwords are only stored locally, offering an additional layer of security by eliminating the need for server storage. Offering the user the opportunity to store in a web server if they prefer the added flexibility over the increased security storing only locally is something I am considering 
+SafePass is a user-friendly and secure tool designed to manage strong and unique passwords. With a focus on user privacy and data protection, this application ensures that passwords are only stored locally if the user wishes to, offering an additional layer of security by eliminating the need for server storage. Offering the user the opportunity to store in a web server if they prefer the added flexibility over the increased security storing only locally is something I am considering too.
 
 By leveraging cryptographic algorithms, the Password Generator enables users to create passwords of varying lengths and complexity. The customizable options include uppercase and lowercase letters, numbers, and special characters, allowing users to tailor their passwords to meet their specific security requirements.
 
@@ -26,9 +26,9 @@ Open-source in nature, the Password Generator project encourages collaboration, 
 
 ## Benefits
 - Local Storage: Your passwords and sensitive information are securely stored on your device, giving you full control over your data.
-- Enhanced Security: By generating strong and unique passwords, the project promotes better security practices, reducing the risk of unauthorized access to personal or sensitive data.
+- Enhanced Security: By generating strong and unique passwords, the application promotes better security practices, reducing the risk of unauthorized access to personal or sensitive data.
 - Time-Saving: With the password generator, users no longer need to manually come up with secure passwords or rely on weak, easily guessable ones. This saves time and effort while ensuring stronger password protection.
-- Versatility: The project can be used in various contexts, such as creating passwords for online accounts, Wi-Fi networks, encrypted files, or any other situation requiring secure password generation.
+- Versatility: The application can be used in various contexts, such as creating passwords for online accounts, Wi-Fi networks, encrypted files, or any other situation requiring secure password generation.
 Open Source: The project may be open source, encouraging collaboration, feedback, and customization from the developer community.
 
 ## Current Implementations
