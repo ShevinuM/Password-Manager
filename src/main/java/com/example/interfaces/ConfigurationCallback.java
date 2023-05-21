@@ -17,4 +17,8 @@ public interface ConfigurationCallback {
     void onConfigFileDeleteSuccess();
 
     void onConfigFileDeleteError(String errorMessage);
+
+    void onUpdateConfigSuccess();
+
+    void onUpdateConfigError(String errorMessage);
 }

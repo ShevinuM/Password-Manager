@@ -7,6 +7,7 @@
     <list default="true" id="0a8f5caf-1571-4a5f-b282-17fb77f4fce4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controller/ConfigurationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controller/ConfigurationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/interfaces/ConfigurationCallback.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/interfaces/ConfigurationCallback.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/storage/ConfigurationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/storage/ConfigurationManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -18,8 +19,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Record" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -166,7 +167,7 @@
       <workItem from="1684523838546" duration="45000" />
       <workItem from="1684589912976" duration="2856000" />
       <workItem from="1684604357087" duration="116000" />
-      <workItem from="1684604646092" duration="6181000" />
+      <workItem from="1684604646092" duration="11240000" />
     </task>
     <servers />
   </component>
