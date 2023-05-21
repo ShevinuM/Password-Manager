@@ -39,8 +39,8 @@ public class SerializationPasswordStorage {
      */
     public synchronized void removePasswordEntry(PasswordEntry passwordEntry) {
         if (passwordEntry != null) {
-            if (passwordEntries.contains(passwordEntry)) {
-                passwordEntries.remove(passwordEntry);
+            if (passwordAlreadyExists(passwordEntry)) {
+
             } else {
                 throw new IllegalArgumentException("PasswordEntry does not exist in the storage");
             }
@@ -62,6 +62,15 @@ public class SerializationPasswordStorage {
      */
     public void clear() {
         passwordEntries.clear();
+    }
+
+    /**
+     * Checks if a given password already exists in the list of entries
+     * @param password The password to check
+     * @return True if the password already exists, false otherwise
+     */
+    public Boolean passwordAlreadyExists(PasswordEntry password) {
+        return passwordEntries.contains(password);
     }
 
     /**

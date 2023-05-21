@@ -6,7 +6,7 @@ public class PasswordEntryController {
 
     private PasswordEntry passwordEntry;
 
-    public PasswordEntryController() {
+    public void addPassword() {
         try {
             // TODO: Implement the UI for a password entry
             // TODO: Get the username, password, website, and folder from the UI

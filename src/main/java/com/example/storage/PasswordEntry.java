@@ -1,3 +1,3 @@
 package com.example.storage;
 
-public record PasswordEntry(String username, String password, String website, Folder folder) {}
+public record PasswordEntry(String username, String password, String website, String folder) {}

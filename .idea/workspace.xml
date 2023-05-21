@@ -6,16 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="0a8f5caf-1571-4a5f-b282-17fb77f4fce4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controller/ConfigurationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controller/ConfigurationFileController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controller/FolderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controller/FolderController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controller/PasswordEntryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controller/PasswordEntryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/interfaces/ConfigurationCallback.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/interfaces/ConfigurationFileCallback.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/storage/Configuration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/config/ConfigurationFile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/storage/ConfigurationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/config/ConfigurationFileHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controller/PasswordSaveController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controller/PasswordSaveController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/interfaces/PasswordSaveCallback.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/interfaces/PasswordSaveCallback.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/storage/PasswordEntry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/storage/PasswordEntry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/storage/PasswordGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/utilities/PasswordGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/storage/SerializationFolderStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/storage/SerializationFolderStorage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/storage/PasswordGeneratorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/storage/PasswordGeneratorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/storage/SerializationPasswordStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/storage/SerializationPasswordStorage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -178,7 +173,7 @@
       <workItem from="1684523838546" duration="45000" />
       <workItem from="1684589912976" duration="2856000" />
       <workItem from="1684604357087" duration="116000" />
-      <workItem from="1684604646092" duration="17537000" />
+      <workItem from="1684604646092" duration="22186000" />
     </task>
     <servers />
   </component>

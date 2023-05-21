@@ -14,4 +14,8 @@ public interface PasswordSaveCallback {
      * @param errorMessage The error message describing the cause of the error
      */
     void onPasswordSaveError(String errorMessage);
+
+    void onAddPasswordEntrySuccess();
+
+    void onAddPasswordEntryError(String error);
 }
