@@ -21,12 +21,13 @@ public class SerializationPasswordStorage {
      * Adds a PasswordEntry to the password storage.
      * @param passwordEntry The PasswordEntry to be added.
      */
-    public synchronized void addPasswordEntry(PasswordEntry passwordEntry) {
+    public synchronized void addPasswordEntry(PasswordEntry passwordEntry, PasswordSaveCallback callback) {
         if (passwordEntry != null) {
-            if (passwordEntries.contains(passwordEntry)) {
-                throw new IllegalArgumentException("PasswordEntry already exists in the storage");
-            } else {
+            if (!passwordAlreadyExists(passwordEntry)) {
                 passwordEntries.add(passwordEntry);
+                callback.onAddPasswordEntrySuccess();
+            } else {
+                callback.onAddPasswordEntryError("password_already_exists");
             }
         } else {
             throw new NullPointerException("PasswordEntry cannot be null");
@@ -40,7 +41,7 @@ public class SerializationPasswordStorage {
     public synchronized void removePasswordEntry(PasswordEntry passwordEntry) {
         if (passwordEntry != null) {
             if (passwordAlreadyExists(passwordEntry)) {
-
+                passwordEntries.remove(passwordEntry);
             } else {
                 throw new IllegalArgumentException("PasswordEntry does not exist in the storage");
             }
@@ -79,19 +80,18 @@ public class SerializationPasswordStorage {
      * @param callback The callback interface to handle the password save result.  The callback methods will be invoked
      *                 to notify the caller about the success or failure of the operation.
      */
-    public synchronized void savePasswords(PasswordSaveCallback callback) {
-        String userHomeDirectory = System.getProperty("user.home");
-        String filePath = userHomeDirectory + File.separator + "passwords.ser";
+    public synchronized void savePasswords(PasswordSaveCallback callback, String locationToSave) {
+        String filePath = locationToSave + File.separator + "passwords.ser";
 
         try (ObjectOutputStream outputStream = new ObjectOutputStream(new FileOutputStream(filePath))) {
             if (Files.exists(Paths.get(filePath))) outputStream.reset(); // File already exists, overwrite its contents
             outputStream.writeObject(passwordEntries);
             callback.onPasswordSaveSuccess();
         } catch (IOException e) {
-            callback.onPasswordSaveError("Failed to save passwords.");
+            callback.onPasswordSaveError("Failed to save passwords to the file");
             e.printStackTrace();
         } catch (SecurityException e) {
-            callback.onPasswordSaveError("Insufficient permissions to write to the file");
+            callback.onPasswordSaveError("Insufficient_permissions to write to the file");
             e.printStackTrace();
         } catch (Exception e) {
             callback.onPasswordSaveError("An unexpected error occured while saving passwords.");
