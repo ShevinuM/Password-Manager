@@ -18,6 +18,7 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
+        <option value="Record" />
       </list>
     </option>
   </component>
@@ -164,7 +165,7 @@
       <workItem from="1684523838546" duration="45000" />
       <workItem from="1684589912976" duration="2856000" />
       <workItem from="1684604357087" duration="116000" />
-      <workItem from="1684604646092" duration="1565000" />
+      <workItem from="1684604646092" duration="5125000" />
     </task>
     <servers />
   </component>

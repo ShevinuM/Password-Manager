@@ -18,15 +18,31 @@ public class ConfigurationManager {
 
     /**
      * Creates the configuration file if it does not exist.
+     * @param configuration The configuration object to be saved.
      */
-    public static void createConfigFile() {
+    public static void createConfigFile(Configuration configuration) {
+        if (isConfigFileExists()) {deleteConfigFile();}
         if (!isConfigFileExists()) {
             try {
                 Files.createDirectories(Paths.get(CONFIG_FOLDER_PATH));
                 Files.createFile(Paths.get(CONFIG_FILE_PATH));
+                updateConfigFile(configuration); // Save the initial configuration to the file
             } catch (IOException e) {
                 e.printStackTrace();
             }
+        }
+    }
+
+    /**
+     * Updates the configuration in the configuration file.
+     * @param configuration The configuration object to be saved.
+     */
+    public static void updateConfigFile(Configuration configuration) {
+        try {
+            ObjectMapper objectMapper = new ObjectMapper();
+            objectMapper.writeValue(new File(CONFIG_FILE_PATH), configuration);
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 
@@ -63,6 +79,17 @@ public class ConfigurationManager {
         return configuration;
     }
 
-    // TODO: Implement Configuration class
+    /**
+     * Deletes the configuration file.
+     */
+    public static void deleteConfigFile() {
+        if (isConfigFileExists()) {
+            try {
+                Files.delete(Paths.get(CONFIG_FILE_PATH));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
 
 }
