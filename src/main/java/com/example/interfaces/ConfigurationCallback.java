@@ -1,12 +1,14 @@
 package com.example.interfaces;
 
+import com.example.storage.Configuration;
+
 public interface ConfigurationCallback {
 
     void onConfigFileCreateSuccess();
 
     void onConfigFileCreateError(String errorMessage);
 
-    void onConfigFileLoadSuccess();
+    void onConfigFileLoadSuccess(Configuration configuration);
 
     void onConfigFileLoadError(String errorMessage);
 

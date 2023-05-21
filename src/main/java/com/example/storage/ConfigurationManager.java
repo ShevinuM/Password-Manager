@@ -14,7 +14,7 @@ import java.nio.file.Paths;
 public class ConfigurationManager {
 
     private static final String CONFIG_FILE_NAME = "config.json";
-    private static final String CONFIG_FOLDER_NAME = "config";
+    private static final String CONFIG_FOLDER_NAME = "SafePassConfig";
     private static final String CONFIG_FOLDER_PATH = System.getProperty("user.home") + "/" + CONFIG_FOLDER_NAME;
     private static final String CONFIG_FILE_PATH = CONFIG_FOLDER_PATH + "/" + CONFIG_FILE_NAME;
 
@@ -24,7 +24,6 @@ public class ConfigurationManager {
      * @param callback The callback to be called when the configuration file is created / not created.
      */
     public static void createConfigFile(String filepath, ConfigurationCallback callback) {
-        if (isConfigFileExists()) {deleteConfigFile();}
         if (!isConfigFileExists()) {
             try {
                 Files.createDirectories(Paths.get(CONFIG_FOLDER_PATH));
@@ -32,7 +31,7 @@ public class ConfigurationManager {
                 updateConfig(filepath, callback); // Save the initial configuration to the file
                 callback.onConfigFileCreateSuccess();
             } catch (IOException e) {
-                callback.onConfigFileCreateError(e.getMessage());
+                callback.onConfigFileCreateError("IOException");
             } catch (SecurityException e) {
                 e.printStackTrace();
                 callback.onConfigFileCreateError("SecurityException");
@@ -75,34 +74,36 @@ public class ConfigurationManager {
 
     /**
      * Loads the configuration file.
-     * @return The configuration file.
+     * @param callback The callback to be called when the configuration file is loaded / not loaded.
      */
-    public static String loadConfigFile() {
-        Configuration configuration = null;
+    public static void loadConfigFile(ConfigurationCallback callback) {
+        Configuration configuration;
         if (isConfigFileExists()) {
             try {
                 ObjectMapper objectMapper = new ObjectMapper();
                 configuration = objectMapper.readValue(new File(CONFIG_FILE_PATH), Configuration.class);
+                callback.onConfigFileLoadSuccess(configuration);
             } catch (IOException e) {
                 e.printStackTrace();
+                callback.onConfigFileLoadError("IOException");
             }
-        }
-        if (configuration != null) {
-            return configuration.fileLocation();
         } else {
-            return "null";
+            callback.onConfigFileLoadError("file_does_not_exist");
         }
+
     }
 
     /**
      * Deletes the configuration file.
      */
-    public static void deleteConfigFile() {
+    public static void deleteConfigFile(ConfigurationCallback callback) {
         if (isConfigFileExists()) {
             try {
                 Files.delete(Paths.get(CONFIG_FILE_PATH));
+                callback.onConfigFileDeleteSuccess();
             } catch (IOException e) {
                 e.printStackTrace();
+                callback.onConfigFileDeleteError("IOException");
             }
         }
     }
