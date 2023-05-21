@@ -1,13 +1,13 @@
-# Password-Manager
+# SafePass
 
 ## Project Description
-The Password Manager project is a user-friendly and secure tool designed to generate strong and unique passwords and store them. With a focus on user privacy and data protection, this project ensures that passwords are only stored locally, offering an additional layer of security by eliminating the need for server storage.
+SafePass is a user-friendly and secure tool designed to generate strong and unique passwords and store them. With a focus on user privacy and data protection, this application ensures that passwords are only stored locally, offering an additional layer of security by eliminating the need for server storage. Offering the user the opportunity to store in a web server if they prefer the added flexibility over the increased security storing only locally is something I am considering 
 
 By leveraging cryptographic algorithms, the Password Generator enables users to create passwords of varying lengths and complexity. The customizable options include uppercase and lowercase letters, numbers, and special characters, allowing users to tailor their passwords to meet their specific security requirements.
 
 One of the project's key advantages lies in its commitment to user privacy. By exclusively storing passwords locally, it eliminates the risk associated with centralized server storage, providing users with enhanced peace of mind regarding the protection of their sensitive information.
 
-In a world where most password storing apps rely on cloud storage solutions, it can be challenging to find an application that prioritizes local storage for enhanced privacy and control. That's why I developed this project, a password manager that focuses on storing your sensitive data locally, right on your device.
+In a world where most password storing apps rely on server storage solutions, it can be challenging to find an application that prioritizes local storage for enhanced privacy and control. That's why I developed this application, a password manager that focuses on storing your sensitive data locally, right on your device.
 
 The Password Generator's intuitive interface makes it accessible to users of all technical backgrounds. Additionally, the ability to copy generated passwords directly to the clipboard streamlines the password integration process across various applications and platforms.
 
