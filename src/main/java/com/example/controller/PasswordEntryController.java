@@ -1,5 +1,6 @@
 package com.example.controller;
 
+import com.example.config.AppConfiguration;
 import com.example.interfaces.PasswordSaveCallback;
 import com.example.storage.PasswordEntry;
 import com.example.storage.SerializationPasswordStorage;
@@ -12,9 +13,9 @@ public class PasswordEntryController implements PasswordSaveCallback {
     private final SerializationPasswordStorage passwordStorage;
     private final String locationToSave;
 
-    public PasswordEntryController(SerializationPasswordStorage passwordStorage, String locationToSave) {
+    public PasswordEntryController(SerializationPasswordStorage passwordStorage, AppConfiguration appConfig) {
         this.passwordStorage = passwordStorage;
-        this.locationToSave = locationToSave;
+        this.locationToSave = appConfig.getFileLocation();
     }
 
     /**
