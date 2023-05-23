@@ -24,6 +24,12 @@ Open-source in nature, the Password Generator project encourages collaboration, 
 - Transfer Password Vault: Safely and securely transfer your password vault between computers using encrypted files. This feature allows you to export your password vault as an encrypted file, which can be transferred to another computer and imported securely into the password manager.
 - Offline Access: Access your passwords and sensitive information even without an internet connection, ensuring seamless availability whenever you need it.
 
+## Security Measures
+- Security of the user data is the highest priority in this application. here are some of the main security measures to be implemented:
+  - Hashing and Salting: User passwords are not stored in plaintext. They are    hashed using PBKDF2 with HmacSHA256 algorithm, which is a widely accepted secure method for password hashing. A unique salt is generated for each password, preventing rainbow table attacks.
+  - Secure Storage: All the hashed and salted passwords are then encrypted using a key derived from the user's master password, adding an additional layer of security. Even if an attacker gets hold of the stored data, they won't be able to decrypt the passwords without the master password.
+  - Master Password Verification: The application verifies the master password using a secure method. The master password itself is never stored. Instead, a hashed and salted version is stored. When verifying, the entered password is hashed and salted in the same way and then compared.
+
 ## Benefits
 - Local Storage: Your passwords and sensitive information are securely stored on your device, giving you full control over your data.
 - Enhanced Security: By generating strong and unique passwords, the application promotes better security practices, reducing the risk of unauthorized access to personal or sensitive data.
